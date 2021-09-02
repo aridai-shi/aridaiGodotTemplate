@@ -1,8 +1,7 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://addons/GGS/src/components/boolean/ggsBool.tscn" type="PackedScene" id=1]
 [ext_resource path="res://main/optionsmenu/options_menu.gd" type="Script" id=2]
-[ext_resource path="res://addons/GGS/src/components/keybind/ggs_keybind_gp.gd" type="Script" id=3]
 [ext_resource path="res://addons/GGS/src/components/arrow_list/ggsArrowList.tscn" type="PackedScene" id=4]
 [ext_resource path="res://addons/GGS/src/components/slider/ggsSlider.tscn" type="PackedScene" id=6]
 [ext_resource path="res://addons/GGS/src/components/keybind/ggsKeybindKb.tscn" type="PackedScene" id=8]
@@ -25,7 +24,7 @@
 [ext_resource path="res://addons/GGS/src/components/keybind/ggsKeybindGp.tscn" type="PackedScene" id=26]
 [ext_resource path="res://addons/GGS/src/components/reset/ggsReset.tscn" type="PackedScene" id=34]
 
-[sub_resource type="AnimatedTexture" id=7]
+[sub_resource type="AnimatedTexture" id=1]
 resource_local_to_scene = true
 frames = 16
 pause = true
@@ -169,7 +168,7 @@ frame_14/delay_sec = 0.0
 frame_15/texture = ExtResource( 25 )
 frame_15/delay_sec = 0.0
 
-[sub_resource type="AnimatedTexture" id=6]
+[sub_resource type="AnimatedTexture" id=5]
 resource_local_to_scene = true
 frames = 16
 pause = true
@@ -205,7 +204,7 @@ frame_14/delay_sec = 0.0
 frame_15/texture = ExtResource( 25 )
 frame_15/delay_sec = 0.0
 
-[sub_resource type="AnimatedTexture" id=5]
+[sub_resource type="AnimatedTexture" id=6]
 resource_local_to_scene = true
 frames = 16
 pause = true
@@ -253,6 +252,7 @@ __meta__ = {
 [node name="Mrgn" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_bottom = -88.0
 custom_constants/margin_top = 10
 custom_constants/margin_bottom = 10
 __meta__ = {
@@ -263,7 +263,7 @@ __meta__ = {
 margin_left = 287.0
 margin_top = 10.0
 margin_right = 737.0
-margin_bottom = 500.0
+margin_bottom = 502.0
 rect_min_size = Vector2( 450, 0 )
 size_flags_horizontal = 4
 size_flags_vertical = 3
@@ -272,12 +272,12 @@ size_flags_vertical = 3
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 443.0
-margin_bottom = 483.0
+margin_bottom = 485.0
 custom_constants/separation = 15
 
 [node name="Settings" type="ScrollContainer" parent="Mrgn/Pnl/VBox"]
 margin_right = 436.0
-margin_bottom = 413.0
+margin_bottom = 415.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 follow_focus = true
@@ -285,7 +285,7 @@ scroll_horizontal_enabled = false
 
 [node name="Mrgn" type="MarginContainer" parent="Mrgn/Pnl/VBox/Settings"]
 margin_right = 436.0
-margin_bottom = 413.0
+margin_bottom = 415.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 5
@@ -294,7 +294,7 @@ custom_constants/margin_left = 5
 [node name="VBox" type="VBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn"]
 margin_left = 5.0
 margin_right = 431.0
-margin_bottom = 413.0
+margin_bottom = 415.0
 custom_constants/separation = 15
 
 [node name="Display" type="VBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox"]
@@ -452,16 +452,11 @@ margin_right = 383.0
 margin_bottom = 22.0
 setting_index = 6
 
-[node name="Gamepad" type="Button" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/MoveRight" instance=ExtResource( 26 )]
+[node name="Gamepad" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/MoveRight" instance=ExtResource( 26 )]
 margin_left = 398.0
 margin_right = 426.0
 margin_bottom = 22.0
-rect_min_size = Vector2( 20, 20 )
-icon = SubResource( 7 )
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+icon = SubResource( 1 )
 setting_index = 10
 
 [node name="MoveLeft" type="HBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls"]
@@ -565,16 +560,11 @@ margin_right = 383.0
 margin_bottom = 22.0
 setting_index = 14
 
-[node name="Gamepad" type="Button" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Accept" instance=ExtResource( 26 )]
+[node name="Gamepad" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Accept" instance=ExtResource( 26 )]
 margin_left = 398.0
 margin_right = 426.0
 margin_bottom = 22.0
-rect_min_size = Vector2( 20, 20 )
-icon = SubResource( 6 )
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+icon = SubResource( 5 )
 setting_index = 15
 
 [node name="Back" type="HBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls"]
@@ -597,22 +587,17 @@ margin_right = 383.0
 margin_bottom = 22.0
 setting_index = 16
 
-[node name="Gamepad" type="Button" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Back" instance=ExtResource( 26 )]
+[node name="Gamepad" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Back" instance=ExtResource( 26 )]
 margin_left = 398.0
 margin_right = 426.0
 margin_bottom = 22.0
-rect_min_size = Vector2( 20, 20 )
-icon = SubResource( 5 )
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+icon = SubResource( 6 )
 setting_index = 17
 
 [node name="Close" type="VBoxContainer" parent="Mrgn/Pnl/VBox"]
-margin_top = 428.0
+margin_top = 430.0
 margin_right = 436.0
-margin_bottom = 476.0
+margin_bottom = 478.0
 
 [node name="HSep" type="HSeparator" parent="Mrgn/Pnl/VBox/Close"]
 margin_right = 436.0
