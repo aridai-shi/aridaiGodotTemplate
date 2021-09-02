@@ -72,9 +72,18 @@ config/name="aridai's Godot Template"
 run/main_scene="res://main/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+ggsManager="*res://addons/GGS/src/ggs_manager.gd"
+SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
+
 [debug]
 
 settings/fps/force_fps=60
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/GGS/plugin.cfg", "res://addons/aseprite_importer/plugin.cfg", "res://addons/sound_manager/plugin.cfg" )
 
 [importer_defaults]
 

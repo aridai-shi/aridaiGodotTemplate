@@ -1,0 +1,633 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://addons/GGS/src/components/boolean/ggsBool.tscn" type="PackedScene" id=1]
+[ext_resource path="res://main/optionsmenu/options_menu.gd" type="Script" id=2]
+[ext_resource path="res://addons/GGS/src/components/keybind/ggs_keybind_gp.gd" type="Script" id=3]
+[ext_resource path="res://addons/GGS/src/components/arrow_list/ggsArrowList.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/GGS/src/components/slider/ggsSlider.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/GGS/src/components/keybind/ggsKeybindKb.tscn" type="PackedScene" id=8]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/R1.png" type="Texture" id=10]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/R3.png" type="Texture" id=11]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/select.png" type="Texture" id=12]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/start.png" type="Texture" id=13]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/x.png" type="Texture" id=14]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/b.png" type="Texture" id=15]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/R2.png" type="Texture" id=16]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/L2.png" type="Texture" id=17]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/L3.png" type="Texture" id=18]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/y.png" type="Texture" id=19]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/L1.png" type="Texture" id=20]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/a.png" type="Texture" id=21]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/down.png" type="Texture" id=22]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/left.png" type="Texture" id=23]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/up.png" type="Texture" id=24]
+[ext_resource path="res://addons/GGS/assets/glyph/gamepad/right.png" type="Texture" id=25]
+[ext_resource path="res://addons/GGS/src/components/keybind/ggsKeybindGp.tscn" type="PackedScene" id=26]
+[ext_resource path="res://addons/GGS/src/components/reset/ggsReset.tscn" type="PackedScene" id=34]
+
+[sub_resource type="AnimatedTexture" id=7]
+resource_local_to_scene = true
+frames = 16
+pause = true
+frame_0/texture = ExtResource( 21 )
+frame_1/texture = ExtResource( 15 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 14 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 19 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 20 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 10 )
+frame_5/delay_sec = 0.0
+frame_6/texture = ExtResource( 17 )
+frame_6/delay_sec = 0.0
+frame_7/texture = ExtResource( 16 )
+frame_7/delay_sec = 0.0
+frame_8/texture = ExtResource( 18 )
+frame_8/delay_sec = 0.0
+frame_9/texture = ExtResource( 11 )
+frame_9/delay_sec = 0.0
+frame_10/texture = ExtResource( 12 )
+frame_10/delay_sec = 0.0
+frame_11/texture = ExtResource( 13 )
+frame_11/delay_sec = 0.0
+frame_12/texture = ExtResource( 24 )
+frame_12/delay_sec = 0.0
+frame_13/texture = ExtResource( 22 )
+frame_13/delay_sec = 0.0
+frame_14/texture = ExtResource( 23 )
+frame_14/delay_sec = 0.0
+frame_15/texture = ExtResource( 25 )
+frame_15/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=2]
+resource_local_to_scene = true
+frames = 16
+pause = true
+frame_0/texture = ExtResource( 21 )
+frame_1/texture = ExtResource( 15 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 14 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 19 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 20 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 10 )
+frame_5/delay_sec = 0.0
+frame_6/texture = ExtResource( 17 )
+frame_6/delay_sec = 0.0
+frame_7/texture = ExtResource( 16 )
+frame_7/delay_sec = 0.0
+frame_8/texture = ExtResource( 18 )
+frame_8/delay_sec = 0.0
+frame_9/texture = ExtResource( 11 )
+frame_9/delay_sec = 0.0
+frame_10/texture = ExtResource( 12 )
+frame_10/delay_sec = 0.0
+frame_11/texture = ExtResource( 13 )
+frame_11/delay_sec = 0.0
+frame_12/texture = ExtResource( 24 )
+frame_12/delay_sec = 0.0
+frame_13/texture = ExtResource( 22 )
+frame_13/delay_sec = 0.0
+frame_14/texture = ExtResource( 23 )
+frame_14/delay_sec = 0.0
+frame_15/texture = ExtResource( 25 )
+frame_15/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=3]
+resource_local_to_scene = true
+frames = 16
+pause = true
+frame_0/texture = ExtResource( 21 )
+frame_1/texture = ExtResource( 15 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 14 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 19 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 20 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 10 )
+frame_5/delay_sec = 0.0
+frame_6/texture = ExtResource( 17 )
+frame_6/delay_sec = 0.0
+frame_7/texture = ExtResource( 16 )
+frame_7/delay_sec = 0.0
+frame_8/texture = ExtResource( 18 )
+frame_8/delay_sec = 0.0
+frame_9/texture = ExtResource( 11 )
+frame_9/delay_sec = 0.0
+frame_10/texture = ExtResource( 12 )
+frame_10/delay_sec = 0.0
+frame_11/texture = ExtResource( 13 )
+frame_11/delay_sec = 0.0
+frame_12/texture = ExtResource( 24 )
+frame_12/delay_sec = 0.0
+frame_13/texture = ExtResource( 22 )
+frame_13/delay_sec = 0.0
+frame_14/texture = ExtResource( 23 )
+frame_14/delay_sec = 0.0
+frame_15/texture = ExtResource( 25 )
+frame_15/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=4]
+resource_local_to_scene = true
+frames = 16
+pause = true
+frame_0/texture = ExtResource( 21 )
+frame_1/texture = ExtResource( 15 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 14 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 19 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 20 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 10 )
+frame_5/delay_sec = 0.0
+frame_6/texture = ExtResource( 17 )
+frame_6/delay_sec = 0.0
+frame_7/texture = ExtResource( 16 )
+frame_7/delay_sec = 0.0
+frame_8/texture = ExtResource( 18 )
+frame_8/delay_sec = 0.0
+frame_9/texture = ExtResource( 11 )
+frame_9/delay_sec = 0.0
+frame_10/texture = ExtResource( 12 )
+frame_10/delay_sec = 0.0
+frame_11/texture = ExtResource( 13 )
+frame_11/delay_sec = 0.0
+frame_12/texture = ExtResource( 24 )
+frame_12/delay_sec = 0.0
+frame_13/texture = ExtResource( 22 )
+frame_13/delay_sec = 0.0
+frame_14/texture = ExtResource( 23 )
+frame_14/delay_sec = 0.0
+frame_15/texture = ExtResource( 25 )
+frame_15/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=6]
+resource_local_to_scene = true
+frames = 16
+pause = true
+frame_0/texture = ExtResource( 21 )
+frame_1/texture = ExtResource( 15 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 14 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 19 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 20 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 10 )
+frame_5/delay_sec = 0.0
+frame_6/texture = ExtResource( 17 )
+frame_6/delay_sec = 0.0
+frame_7/texture = ExtResource( 16 )
+frame_7/delay_sec = 0.0
+frame_8/texture = ExtResource( 18 )
+frame_8/delay_sec = 0.0
+frame_9/texture = ExtResource( 11 )
+frame_9/delay_sec = 0.0
+frame_10/texture = ExtResource( 12 )
+frame_10/delay_sec = 0.0
+frame_11/texture = ExtResource( 13 )
+frame_11/delay_sec = 0.0
+frame_12/texture = ExtResource( 24 )
+frame_12/delay_sec = 0.0
+frame_13/texture = ExtResource( 22 )
+frame_13/delay_sec = 0.0
+frame_14/texture = ExtResource( 23 )
+frame_14/delay_sec = 0.0
+frame_15/texture = ExtResource( 25 )
+frame_15/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=5]
+resource_local_to_scene = true
+frames = 16
+pause = true
+frame_0/texture = ExtResource( 21 )
+frame_1/texture = ExtResource( 15 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 14 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 19 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 20 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 10 )
+frame_5/delay_sec = 0.0
+frame_6/texture = ExtResource( 17 )
+frame_6/delay_sec = 0.0
+frame_7/texture = ExtResource( 16 )
+frame_7/delay_sec = 0.0
+frame_8/texture = ExtResource( 18 )
+frame_8/delay_sec = 0.0
+frame_9/texture = ExtResource( 11 )
+frame_9/delay_sec = 0.0
+frame_10/texture = ExtResource( 12 )
+frame_10/delay_sec = 0.0
+frame_11/texture = ExtResource( 13 )
+frame_11/delay_sec = 0.0
+frame_12/texture = ExtResource( 24 )
+frame_12/delay_sec = 0.0
+frame_13/texture = ExtResource( 22 )
+frame_13/delay_sec = 0.0
+frame_14/texture = ExtResource( 23 )
+frame_14/delay_sec = 0.0
+frame_15/texture = ExtResource( 25 )
+frame_15/delay_sec = 0.0
+
+[node name="OptionsMenu" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mrgn" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_top = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pnl" type="PanelContainer" parent="Mrgn"]
+margin_left = 287.0
+margin_top = 10.0
+margin_right = 737.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 450, 0 )
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="VBox" type="VBoxContainer" parent="Mrgn/Pnl"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 443.0
+margin_bottom = 483.0
+custom_constants/separation = 15
+
+[node name="Settings" type="ScrollContainer" parent="Mrgn/Pnl/VBox"]
+margin_right = 436.0
+margin_bottom = 413.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="Mrgn" type="MarginContainer" parent="Mrgn/Pnl/VBox/Settings"]
+margin_right = 436.0
+margin_bottom = 413.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 5
+custom_constants/margin_left = 5
+
+[node name="VBox" type="VBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn"]
+margin_left = 5.0
+margin_right = 431.0
+margin_bottom = 413.0
+custom_constants/separation = 15
+
+[node name="Display" type="VBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox"]
+margin_right = 426.0
+margin_bottom = 84.0
+
+[node name="Title" type="Label" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Display"]
+margin_left = 189.0
+margin_right = 236.0
+margin_bottom = 14.0
+size_flags_horizontal = 6
+text = "Display"
+
+[node name="WindowMode" type="HBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Display"]
+margin_top = 18.0
+margin_right = 426.0
+margin_bottom = 58.0
+
+[node name="Label" type="Label" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Display/WindowMode"]
+margin_top = 13.0
+margin_right = 346.0
+margin_bottom = 27.0
+size_flags_horizontal = 3
+text = "Fullscreen"
+
+[node name="Bool" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Display/WindowMode" instance=ExtResource( 1 )]
+margin_left = 350.0
+margin_right = 426.0
+
+[node name="WindowScale" type="HBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Display"]
+margin_top = 62.0
+margin_right = 426.0
+margin_bottom = 84.0
+
+[node name="Label" type="Label" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Display/WindowScale"]
+margin_top = 4.0
+margin_right = 358.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+text = "Window Scale"
+
+[node name="ArrowList" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Display/WindowScale" instance=ExtResource( 4 )]
+margin_left = 362.0
+margin_right = 426.0
+margin_bottom = 22.0
+setting_index = 1
+list = [ "x1", "x2", "x3" ]
+wrap_value = false
+
+[node name="Audio" type="VBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox"]
+margin_top = 99.0
+margin_right = 426.0
+margin_bottom = 209.0
+
+[node name="HSep" type="HSeparator" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Audio"]
+margin_right = 426.0
+margin_bottom = 4.0
+
+[node name="Title" type="Label" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Audio"]
+margin_left = 194.0
+margin_top = 8.0
+margin_right = 231.0
+margin_bottom = 22.0
+size_flags_horizontal = 6
+text = "Audio"
+
+[node name="Music" type="HBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Audio"]
+margin_top = 26.0
+margin_right = 426.0
+margin_bottom = 66.0
+
+[node name="Label" type="Label" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Audio/Music"]
+margin_top = 13.0
+margin_right = 205.0
+margin_bottom = 27.0
+size_flags_horizontal = 3
+text = "Music"
+
+[node name="Mute" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Audio/Music" instance=ExtResource( 1 )]
+margin_left = 209.0
+margin_right = 322.0
+text = "Mute"
+setting_index = 3
+
+[node name="Volume" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Audio/Music" instance=ExtResource( 6 )]
+margin_left = 326.0
+margin_right = 426.0
+margin_bottom = 40.0
+size_flags_vertical = 1
+setting_index = 2
+
+[node name="Sfx" type="HBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Audio"]
+margin_top = 70.0
+margin_right = 426.0
+margin_bottom = 110.0
+
+[node name="Label" type="Label" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Audio/Sfx"]
+margin_top = 13.0
+margin_right = 205.0
+margin_bottom = 27.0
+size_flags_horizontal = 3
+text = "Sfx"
+
+[node name="Mute" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Audio/Sfx" instance=ExtResource( 1 )]
+margin_left = 209.0
+margin_right = 322.0
+text = "Mute"
+setting_index = 5
+
+[node name="Volume" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Audio/Sfx" instance=ExtResource( 6 )]
+margin_left = 326.0
+margin_right = 426.0
+margin_bottom = 40.0
+size_flags_vertical = 1
+setting_index = 4
+
+[node name="Controls" type="VBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox"]
+margin_top = 224.0
+margin_right = 426.0
+margin_bottom = 402.0
+
+[node name="HSep" type="HSeparator" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls"]
+margin_right = 426.0
+margin_bottom = 4.0
+
+[node name="Title" type="Label" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls"]
+margin_left = 186.0
+margin_top = 8.0
+margin_right = 239.0
+margin_bottom = 22.0
+size_flags_horizontal = 6
+text = "Controls"
+
+[node name="Controls" type="VBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls"]
+margin_top = 26.0
+margin_right = 426.0
+margin_bottom = 178.0
+
+[node name="MoveRight" type="HBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls"]
+margin_right = 426.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+custom_constants/separation = 15
+
+[node name="Label" type="Label" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/MoveRight"]
+margin_top = 4.0
+margin_right = 348.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+text = "Move Right"
+
+[node name="Keyboard" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/MoveRight" instance=ExtResource( 8 )]
+margin_left = 363.0
+margin_right = 383.0
+margin_bottom = 22.0
+setting_index = 6
+
+[node name="Gamepad" type="Button" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/MoveRight" instance=ExtResource( 26 )]
+margin_left = 398.0
+margin_right = 426.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 20, 20 )
+icon = SubResource( 7 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+setting_index = 10
+
+[node name="MoveLeft" type="HBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls"]
+margin_top = 26.0
+margin_right = 426.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+custom_constants/separation = 15
+
+[node name="Label" type="Label" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/MoveLeft"]
+margin_top = 4.0
+margin_right = 348.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+text = "Move Left"
+
+[node name="Keyboard" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/MoveLeft" instance=ExtResource( 8 )]
+margin_left = 363.0
+margin_right = 383.0
+margin_bottom = 22.0
+setting_index = 7
+
+[node name="Gamepad" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/MoveLeft" instance=ExtResource( 26 )]
+margin_left = 398.0
+margin_right = 426.0
+margin_bottom = 22.0
+icon = SubResource( 2 )
+setting_index = 11
+
+[node name="Move Up" type="HBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls"]
+margin_top = 52.0
+margin_right = 426.0
+margin_bottom = 74.0
+size_flags_horizontal = 3
+custom_constants/separation = 15
+
+[node name="Label" type="Label" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Move Up"]
+margin_top = 4.0
+margin_right = 348.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+text = "Move Up"
+
+[node name="Keyboard" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Move Up" instance=ExtResource( 8 )]
+margin_left = 363.0
+margin_right = 383.0
+margin_bottom = 22.0
+setting_index = 8
+
+[node name="Gamepad" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Move Up" instance=ExtResource( 26 )]
+margin_left = 398.0
+margin_right = 426.0
+margin_bottom = 22.0
+icon = SubResource( 3 )
+setting_index = 12
+
+[node name="Move Down" type="HBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls"]
+margin_top = 78.0
+margin_right = 426.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+custom_constants/separation = 15
+
+[node name="Label" type="Label" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Move Down"]
+margin_top = 4.0
+margin_right = 348.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+text = "Move Down"
+
+[node name="Keyboard" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Move Down" instance=ExtResource( 8 )]
+margin_left = 363.0
+margin_right = 383.0
+margin_bottom = 22.0
+setting_index = 9
+
+[node name="Gamepad" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Move Down" instance=ExtResource( 26 )]
+margin_left = 398.0
+margin_right = 426.0
+margin_bottom = 22.0
+icon = SubResource( 4 )
+setting_index = 13
+
+[node name="Accept" type="HBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls"]
+margin_top = 104.0
+margin_right = 426.0
+margin_bottom = 126.0
+size_flags_horizontal = 3
+custom_constants/separation = 15
+
+[node name="Label" type="Label" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Accept"]
+margin_top = 4.0
+margin_right = 348.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+text = "Accept"
+
+[node name="Keyboard" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Accept" instance=ExtResource( 8 )]
+margin_left = 363.0
+margin_right = 383.0
+margin_bottom = 22.0
+setting_index = 14
+
+[node name="Gamepad" type="Button" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Accept" instance=ExtResource( 26 )]
+margin_left = 398.0
+margin_right = 426.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 20, 20 )
+icon = SubResource( 6 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+setting_index = 15
+
+[node name="Back" type="HBoxContainer" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls"]
+margin_top = 130.0
+margin_right = 426.0
+margin_bottom = 152.0
+size_flags_horizontal = 3
+custom_constants/separation = 15
+
+[node name="Label" type="Label" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Back"]
+margin_top = 4.0
+margin_right = 348.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+text = "Back"
+
+[node name="Keyboard" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Back" instance=ExtResource( 8 )]
+margin_left = 363.0
+margin_right = 383.0
+margin_bottom = 22.0
+setting_index = 16
+
+[node name="Gamepad" type="Button" parent="Mrgn/Pnl/VBox/Settings/Mrgn/VBox/Controls/Controls/Back" instance=ExtResource( 26 )]
+margin_left = 398.0
+margin_right = 426.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 20, 20 )
+icon = SubResource( 5 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+setting_index = 17
+
+[node name="Close" type="VBoxContainer" parent="Mrgn/Pnl/VBox"]
+margin_top = 428.0
+margin_right = 436.0
+margin_bottom = 476.0
+
+[node name="HSep" type="HSeparator" parent="Mrgn/Pnl/VBox/Close"]
+margin_right = 436.0
+custom_constants/separation = 0
+
+[node name="Reset" parent="Mrgn/Pnl/VBox/Close" instance=ExtResource( 34 )]
+margin_top = 4.0
+margin_right = 436.0
+margin_bottom = 24.0
+setting_nodes = [ NodePath("../../Settings/Mrgn/VBox/Display/WindowMode/Bool"), NodePath("../../Settings/Mrgn/VBox/Display/WindowScale/ArrowList"), NodePath("../../Settings/Mrgn/VBox/Audio/Music/Mute"), NodePath("../../Settings/Mrgn/VBox/Audio/Music/Volume"), NodePath("../../Settings/Mrgn/VBox/Audio/Sfx/Mute"), NodePath("../../Settings/Mrgn/VBox/Audio/Sfx/Volume"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/MoveRight/Keyboard"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/MoveRight/Gamepad"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/MoveLeft/Keyboard"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/MoveLeft/Gamepad"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Move Up/Keyboard"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Move Up/Gamepad"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Move Down/Keyboard"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Move Down/Gamepad"), NodePath("../../Settings/Mrgn/VBox/Misc/PlayerName/Field"), NodePath("../../Settings/Mrgn/VBox/Misc/BGColor/Options"), NodePath("../../Settings/Mrgn/VBox/Misc/PlayerSpeed/Field") ]
+
+[node name="Close" type="Button" parent="Mrgn/Pnl/VBox/Close"]
+margin_top = 28.0
+margin_right = 436.0
+margin_bottom = 48.0
+text = "Close Menu"
+
+[connection signal="pressed" from="Mrgn/Pnl/VBox/Close/Close" to="." method="_on_Close_pressed"]

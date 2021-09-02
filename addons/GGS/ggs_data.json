@@ -1,0 +1,8 @@
+{
+	"default_logic_path": "res://src/setting_logic/",
+	"auto_select_new_nodes": true,
+	"show_prints": false,
+	"show_errors": false,
+	"keybind_confirm_text": "Awaiting input...",
+	"keybind_assigned_text": "Already assigned..."
+}
