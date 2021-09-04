@@ -11,6 +11,7 @@ env:
   GH_PAGES: ${{ false }} #set to true if you want to enable automatic github pages deployment
 
 jobs:
+
   export-windows:
     name: Windows Export
     runs-on: ubuntu-latest
@@ -33,16 +34,28 @@ jobs:
           name: windows
           path: build/windows
       - name: Zip Folder
-        run: zip -r itch.zip build/windows
+        run: zip -r windows.zip build/windows
+      - name: Get release
+        id: get_release
+        uses: bruceadams/get-release@v1.2.3
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Upload release binary
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.get_release.outputs.upload_url }}
+          files: windows.zip
+        
       - name: Deploy to itch.io
-
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
           CHANNEL: windows
           ITCH_GAME: ${{ secrets.ITCH_GAME }}
           ITCH_USER: ${{ secrets.ITCH_USER }}
-          PACKAGE: itch.zip
+          PACKAGE: windows.zip
 
   export-linux:
     name: Linux Export
@@ -66,7 +79,19 @@ jobs:
           name: linux
           path: build/linux
       - name: Zip Folder
-        run: zip -r itch.zip build/linux
+        run: zip -r linux.zip build/linux
+      - name: Get release
+        id: get_release
+        uses: bruceadams/get-release@v1.2.3
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Upload release binary
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.get_release.outputs.upload_url }}
+          files: linux.zip
       - name: Deploy to itch.io
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
@@ -74,7 +99,7 @@ jobs:
           CHANNEL: linux
           ITCH_GAME: ${{ secrets.ITCH_GAME }}
           ITCH_USER: ${{ secrets.ITCH_USER }}
-          PACKAGE: itch.zip
+          PACKAGE: linux.zip
 
   export-web:
     name: Web Export
@@ -110,7 +135,19 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: build/web # The folder the action should deploy.
       - name: Zip Folder
-        run: zip -r itch.zip build/web
+        run: zip -r web.zip build/web
+      - name: Get release
+        id: get_release
+        uses: bruceadams/get-release@v1.2.3
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Upload release binary
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.get_release.outputs.upload_url }}
+          files: web.zip
       - name: Deploy to itch.io
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
@@ -118,7 +155,7 @@ jobs:
           CHANNEL: HTML
           ITCH_GAME: ${{ secrets.ITCH_GAME }}
           ITCH_USER: ${{ secrets.ITCH_USER }}
-          PACKAGE: itch.zip
+          PACKAGE: web.zip
 
   export-mac:
     name: Mac Export
@@ -142,7 +179,19 @@ jobs:
           name: mac
           path: build/mac
       - name: Zip Folder
-        run: zip -r itch.zip build/mac
+        run: zip -r mac.zip build/mac
+      - name: Get release
+        id: get_release
+        uses: bruceadams/get-release@v1.2.3
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Upload release binary
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.get_release.outputs.upload_url }}
+          files: mac.zip
       - name: Deploy to itch.io
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
@@ -150,7 +199,7 @@ jobs:
           CHANNEL: mac
           ITCH_GAME: ${{ secrets.ITCH_GAME }}
           ITCH_USER: ${{ secrets.ITCH_USER }}
-          PACKAGE: itch.zip
+          PACKAGE: mac.zip
 
   export-android:
     name: Android Export
@@ -189,7 +238,19 @@ jobs:
           name: android
           path: build/android
       - name: Zip Folder
-        run: zip -r itch.zip build/android
+        run: zip -r android.zip build/android
+      - name: Get release
+        id: get_release
+        uses: bruceadams/get-release@v1.2.3
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Upload release binary
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.get_release.outputs.upload_url }}
+          files: android.zip
       - name: Deploy to itch.io
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
@@ -197,4 +258,4 @@ jobs:
           CHANNEL: android
           ITCH_GAME: ${{ secrets.ITCH_GAME }}
           ITCH_USER: ${{ secrets.ITCH_USER }}
-          PACKAGE: itch.zip
+          PACKAGE: android.zip
