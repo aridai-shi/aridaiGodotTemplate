@@ -12,17 +12,19 @@ __meta__ = {
 }
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 3.0
 one_shot = true
 autostart = true
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
-margin_left = 900.0
-margin_top = 474.0
-margin_right = 1900.0
-margin_bottom = 1474.0
+anchor_right = 1.001
+anchor_bottom = 0.998
+margin_left = 1024.0
+margin_top = 600.0
+margin_right = 8174.98
+margin_bottom = 4801.2
+rect_rotation = 180.0
 rect_scale = Vector2( 0.125, 0.125 )
-value = 30.0
 texture_progress = ExtResource( 2 )
 fill_mode = 4
 tint_progress = Color( 0.1958, 0.89, 0.56604, 1 )

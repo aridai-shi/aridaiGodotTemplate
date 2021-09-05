@@ -54,7 +54,7 @@ func _process(time):
 
 func update_progress():
 	var progress = float(loader.get_stage()) / loader.get_stage_count()
-	loadingScreenInstance.lerpValue = lerp(loadingScreenInstance.lerpValue,progress,1/30)
+	loadingScreenInstance.get_node("./TextureProgress").value= progress*100
 
 
 func set_new_scene(scene_resource):
