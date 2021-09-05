@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://loading/LoadingScene.gd" type="Script" id=1]
+[ext_resource path="res://loading/circle.png" type="Texture" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_left = 900.0
+margin_top = 474.0
+margin_right = 1900.0
+margin_bottom = 1474.0
+rect_scale = Vector2( 0.125, 0.125 )
+value = 30.0
+texture_progress = ExtResource( 2 )
+fill_mode = 4
+tint_progress = Color( 0.1958, 0.89, 0.56604, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

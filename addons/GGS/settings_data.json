@@ -20,7 +20,7 @@
 			"min_scale": 1
 		},
 		"current": {
-			"value": 0,
+			"value": 2,
 			"min_scale": 1
 		},
 		"logic": "res://main/optionsmenu/setting_logic/window_scale.gd"
@@ -71,12 +71,12 @@
 		"name": "sfx_mute",
 		"default": {
 			"value": false,
-			"bus_name1": "Sfx",
+			"bus_name1": "SE",
 			"bus_name2": "BGS"
 		},
 		"current": {
 			"value": false,
-			"bus_name1": "Sfx",
+			"bus_name1": "SE",
 			"bus_name2": "BGS"
 		},
 		"logic": "res://main/optionsmenu/setting_logic/audio_mute.gd"

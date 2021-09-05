@@ -240,19 +240,23 @@ frame_14/delay_sec = 0.0
 frame_15/texture = ExtResource( 25 )
 frame_15/delay_sec = 0.0
 
-[node name="OptionsMenu" type="Control"]
+[node name="OptionsMenu" type="CenterContainer"]
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 275.0
+margin_right = -275.0
+margin_bottom = -88.0
+grow_horizontal = 2
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Mrgn" type="MarginContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_bottom = -88.0
+margin_left = 12.0
+margin_right = 462.0
+margin_bottom = 512.0
 custom_constants/margin_top = 10
 custom_constants/margin_bottom = 10
 __meta__ = {
@@ -260,11 +264,10 @@ __meta__ = {
 }
 
 [node name="Pnl" type="PanelContainer" parent="Mrgn"]
-margin_left = 287.0
 margin_top = 10.0
-margin_right = 737.0
+margin_right = 450.0
 margin_bottom = 502.0
-rect_min_size = Vector2( 450, 0 )
+rect_min_size = Vector2( 450, 492 )
 size_flags_horizontal = 4
 size_flags_vertical = 3
 
@@ -607,7 +610,7 @@ custom_constants/separation = 0
 margin_top = 4.0
 margin_right = 436.0
 margin_bottom = 24.0
-setting_nodes = [ NodePath("../../Settings/Mrgn/VBox/Display/WindowMode/Bool"), NodePath("../../Settings/Mrgn/VBox/Display/WindowScale/ArrowList"), NodePath("../../Settings/Mrgn/VBox/Audio/Music/Mute"), NodePath("../../Settings/Mrgn/VBox/Audio/Music/Volume"), NodePath("../../Settings/Mrgn/VBox/Audio/Sfx/Mute"), NodePath("../../Settings/Mrgn/VBox/Audio/Sfx/Volume"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/MoveRight/Keyboard"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/MoveRight/Gamepad"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/MoveLeft/Keyboard"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/MoveLeft/Gamepad"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Move Up/Keyboard"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Move Up/Gamepad"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Move Down/Keyboard"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Move Down/Gamepad"), NodePath("../../Settings/Mrgn/VBox/Misc/PlayerName/Field"), NodePath("../../Settings/Mrgn/VBox/Misc/BGColor/Options"), NodePath("../../Settings/Mrgn/VBox/Misc/PlayerSpeed/Field") ]
+setting_nodes = [ NodePath("../../Settings/Mrgn/VBox/Display/WindowMode/Bool"), NodePath("../../Settings/Mrgn/VBox/Display/WindowScale/ArrowList"), NodePath("../../Settings/Mrgn/VBox/Audio/Music/Mute"), NodePath("../../Settings/Mrgn/VBox/Audio/Music/Volume"), NodePath("../../Settings/Mrgn/VBox/Audio/Sfx/Mute"), NodePath("../../Settings/Mrgn/VBox/Audio/Sfx/Volume"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/MoveRight/Keyboard"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/MoveRight/Gamepad"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/MoveLeft/Keyboard"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/MoveLeft/Gamepad"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Move Up/Keyboard"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Move Up/Gamepad"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Move Down/Keyboard"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Move Down/Gamepad"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Accept/Keyboard"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Accept/Gamepad"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Back/Keyboard"), NodePath("../../Settings/Mrgn/VBox/Controls/Controls/Back/Gamepad") ]
 
 [node name="Close" type="Button" parent="Mrgn/Pnl/VBox/Close"]
 margin_top = 28.0
