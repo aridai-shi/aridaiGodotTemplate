@@ -10,6 +10,8 @@ var time_max = 20000 # msec
 
 func _ready():
 	var root = get_tree().get_root()
+	fade_into_game()
+	
 func add_scene(id:String): # Game requests to switch to this scene.
 	var path
 	if !(".tscn" in scenes[id]):
@@ -69,3 +71,13 @@ func _physics_process(delta):
 	if (Input.is_action_just_pressed("ui_focus_next") && (get_node_or_null("./OptionsMenu")==null)):
 		get_tree().paused = true
 		add_scene("options_menu")
+
+func fade_into_game():
+	yield(get_tree().create_timer(0.5),"timeout")
+	var fadeTween : Tween = Tween.new()
+	fadeTween.interpolate_property($StartFadeIn/ColorRect,"modulate:a", $StartFadeIn/ColorRect.modulate.a, 0.0,1,Tween.TRANS_CUBIC)
+	$StartFadeIn.add_child(fadeTween)
+	fadeTween.start()
+	yield(fadeTween,"tween_all_completed")
+	print("YO MOM")
+	fadeTween.queue_free()

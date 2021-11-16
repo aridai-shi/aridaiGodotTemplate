@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/down.png-72503a7de5b8abf1f563569c3ced7678.stex"
+path="res://.import/boot.png-0853cbca0c90c11787730c34e1b0063a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/GGS/assets/glyph/gamepad/down.png"
-dest_files=[ "res://.import/down.png-72503a7de5b8abf1f563569c3ced7678.stex" ]
+source_file="res://boot.png"
+dest_files=[ "res://.import/boot.png-0853cbca0c90c11787730c34e1b0063a.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0
