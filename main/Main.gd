@@ -6,6 +6,7 @@ var loadingScreenInstance:Node
 var loader
 var wait_frames
 var time_max = 20000 # msec
+var optionsMenuOpen = false
 
 
 func _ready():
@@ -68,16 +69,18 @@ func set_new_scene(scene_resource):
 	loadingScreenInstance.close()
 
 func _physics_process(delta):
-	if (Input.is_action_just_pressed("ui_focus_next") && (get_node_or_null("./OptionsMenu")==null)):
+	if (Input.is_action_just_pressed("ui_focus_next") && !optionsMenuOpen):
 		get_tree().paused = true
 		add_scene("options_menu")
+		optionsMenuOpen = true
 
 func fade_into_game():
+	OS.window_size = Vector2(ProjectSettings.get_setting("display/window/size/width"),ProjectSettings.get_setting("display/window/size/height"))
+	OS.window_position = OS.get_screen_size()/2 - OS.window_size/2
 	yield(get_tree().create_timer(0.5),"timeout")
 	var fadeTween : Tween = Tween.new()
 	fadeTween.interpolate_property($StartFadeIn/ColorRect,"modulate:a", $StartFadeIn/ColorRect.modulate.a, 0.0,1,Tween.TRANS_CUBIC)
 	$StartFadeIn.add_child(fadeTween)
 	fadeTween.start()
 	yield(fadeTween,"tween_all_completed")
-	print("YO MOM")
 	fadeTween.queue_free()

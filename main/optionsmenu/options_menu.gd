@@ -10,6 +10,7 @@ func _ready() -> void:
 
 func _on_Close_pressed() -> void:
 	get_tree().paused = false
+	get_parent().get_parent().get_parent().optionsMenuOpen = false
 	queue_free()
 
 

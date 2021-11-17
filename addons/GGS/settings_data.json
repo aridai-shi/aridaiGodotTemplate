@@ -61,7 +61,7 @@
 			"bus_name2": "BGS"
 		},
 		"current": {
-			"value": 1,
+			"value": 0.9,
 			"bus_name1": "SE",
 			"bus_name2": "BGS"
 		},
