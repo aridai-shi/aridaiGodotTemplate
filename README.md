@@ -19,4 +19,5 @@ You can either be more precise in your exports by triggering the manual Dispatch
 - [PunchablePlushie](https://github.com/PunchablePlushie/godot_ggs) for GGS
 - [hectorid](https://github.com/hectorid/aseprite_importer) for Aseprite Importer
 - [Xecestel](https://gitlab.com/Xecestel/sound-manager) for Sound Manager
+- [Kenney](https://www.kenney.nl/assets/input-prompts-pixel-16) for the Pixel Input Prompt pack
 - The [Godot Team](https://www.patreon.com/godotengine) for an amazing engine
