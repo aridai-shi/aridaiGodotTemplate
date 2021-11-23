@@ -19,4 +19,3 @@ You can either be more precise in your exports by triggering the manual Dispatch
 - [hectorid](https://github.com/hectorid/aseprite_importer) for Aseprite Importer
 - [Xecestel](https://gitlab.com/Xecestel/sound-manager) for Sound Manager
 - The [Godot Team](https://www.patreon.com/godotengine) for an amazing engine
-- 
