@@ -15,7 +15,7 @@ jobs:
   export_windows:
     name: Windows Export
     runs-on: ubuntu-latest
-    if: ${{ env.EXPORT_PLATFORM == 'windows' || env.EXPORT_PLATFORM == 'all' }} && contains(github.event.head_commit.message, '!itch-deploy') 
+    if: contains(github.event.head_commit.message, '!itch-deploy')
     container:
       image: barichello/godot-ci:3.4
     steps:
@@ -50,7 +50,7 @@ jobs:
   export_linux:
     name: Linux Export
     runs-on: ubuntu-latest
-    if: ${{ env.EXPORT_PLATFORM == 'linux' || env.EXPORT_PLATFORM == 'all' }} && contains(github.event.head_commit.message, '!itch-deploy')
+    if: contains(github.event.head_commit.message, '!itch-deploy')
     container:
       image: barichello/godot-ci:3.4
     steps:
@@ -85,7 +85,7 @@ jobs:
   export_web:
     name: Web Export
     runs-on: ubuntu-latest
-    if: ${{ env.EXPORT_PLATFORM == 'web' || env.EXPORT_PLATFORM == 'all' }} && contains(github.event.head_commit.message, '!itch-deploy')
+    if: contains(github.event.head_commit.message, '!itch-deploy')
     container:
       image: barichello/godot-ci:3.4
     steps:
@@ -130,7 +130,7 @@ jobs:
   export_mac:
     name: Mac Export
     runs-on: ubuntu-latest
-    if: ${{ env.EXPORT_PLATFORM == 'macos' || env.EXPORT_PLATFORM == 'all' }} && contains(github.event.head_commit.message, '!itch-deploy')
+    if: contains(github.event.head_commit.message, '!itch-deploy')
     container:
       image: barichello/godot-ci:3.4
     steps:
@@ -165,7 +165,7 @@ jobs:
   export_android:
     name: Android Export
     runs-on: ubuntu-latest
-    if: ${{ env.EXPORT_PLATFORM == 'android' || env.EXPORT_PLATFORM == 'all' }} && contains(github.event.head_commit.message, '!itch-deploy')
+    if: contains(github.event.head_commit.message, '!itch-deploy')
     container:
       image: myood/godot-ci-android-export:godot-3.4
     steps:
