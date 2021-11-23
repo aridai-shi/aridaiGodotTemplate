@@ -1,4 +1,4 @@
-# aridaiGodotTemplate
+# aridai's (Very Personal) Godot Template
  A project template for Godot with some of the most essential plugins, a scene transition/loading system and itch.io integration
 # How to set up itch.io builds?
 You have to fill in 3 secrets in your repository:
@@ -12,3 +12,11 @@ You can either be more precise in your exports by triggering the manual Dispatch
 - Sound Manager - A pipeline to control Music and SFX, complete with volume control in the GGS
 - Asynchronous Scene loading - Complete with a loading anim for the really hefty assets
 - Scene transition system - Complete with seamless music and lack of freezing transitions
+# Special thanks
+- [Crystal Bit](https://github.com/crystal-bit/godot-game-template) for the Dispatch Workflow
+- [barichello](https://github.com/aBARICHELLO/godot-ci) for godot-ci
+- [PunchablePlushie](https://github.com/PunchablePlushie/godot_ggs) for GGS
+- [hectorid](https://github.com/hectorid/aseprite_importer) for Aseprite Importer
+- [Xecestel](https://gitlab.com/Xecestel/sound-manager) for Sound Manager
+- The [Godot Team](https://www.patreon.com/godotengine) for an amazing engine
+- 
